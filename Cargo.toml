@@ -1,0 +1,25 @@
+[package]
+name = "proteinml"
+version = "0.1.0"
+edition = "2024"
+readme = "README.md"
+license = "MIT"
+authors = ["Gaurav Sablok"]
+description = "deep learning on proteins"
+homepage = "https://codeberg.org/gsablok/proteinml"
+repository = "https://codeberg.org/gsablok/proteinml"
+keywords = ["bioinformatics","genomics"]
+
+[dependencies]
+clap = { version = "4.6.1", features = ["derive"] }
+figlet-rs = "0.1.5"
+rayon = "1.12.0"
+smartcore = "0.5.2"
+tokio = { version = "1.52.3", features = ["full"] }
+smelt-ml = "3.0"
+ndarray = "0.16"
+burn = { version = "0.21", features = ["ndarray", "autodiff"] }
+rand = "0.8"
+
+[profile.release]
+opt-level = 3
